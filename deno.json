@@ -1,0 +1,26 @@
+{
+  "name": "@hviana/baileys",
+  "version": "1.0.4",
+  "lock": false,
+  "nodeModulesDir": "auto",
+  "imports": {
+    "baileys": "https://esm.sh/baileys?target=denonext&external=jimp,music-metadata,sharp,pino,bufferutil,utf-8-validate,node:process",
+    "jimp": "npm:jimp@0.16.1",
+    "music-metadata": "npm:music-metadata@7.14.0",
+    "sharp": "npm:sharp@0.34.1",
+    "pino": "npm:pino@9.6.0",
+    "bufferutil": "npm:bufferutil@4.0.9",
+    "utf-8-validate": "npm:utf-8-validate@6.0.5",
+    "esbuild": "https://deno.land/x/esbuild@v0.25.4/mod.js",
+    "esbuild-deno-loader": "jsr:@luca/esbuild-deno-loader@0.11.1",
+    "path": "jsr:@std/path@1.0.9",
+    "node:process": "jsr:@hviana/node-process@1.0.0"
+  },
+  "exports": "./mod.js",
+  "tasks": {
+    "install": "deno install",
+    "install-scripts": "deno install --allow-scripts=npm:bufferutil@4.0.9,npm:sharp@0.34.1,npm:utf-8-validate@6.0.5",
+    "build": "deno run --allow-all build.ts",
+    "all": "deno task install && deno task install-scripts && deno task build"
+  }
+}
