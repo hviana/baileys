@@ -1,0 +1,26 @@
+{
+  "name": "@hviana/baileys",
+  "version": "1.0.5",
+  "lock": false,
+  "nodeModulesDir": "manual",
+  "unstable": ["npm-patch"],
+  "patch": [
+    "./node_modules/baileys",
+    "./node_modules/@whiskeysockets/libsignal-node",
+    "./node_modules/@whiskeysockets/eslint-config"
+  ],
+  "imports": {
+    "esbuild": "https://deno.land/x/esbuild@v0.25.4/mod.js",
+    "esbuild-deno-loader": "jsr:@luca/esbuild-deno-loader@0.11.1",
+    "path": "jsr:@std/path@1.0.9"
+  },
+  "exports": "./mod.js",
+  "publish": {
+    "include": ["./**"]
+  },
+  "tasks": {
+    "clean": "rm -f package.json package-lock.json",
+    "build-module": "deno run --allow-all build.ts",
+    "build": "deno task clean && deno task build-module"
+  }
+}
