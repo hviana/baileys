@@ -1,6 +1,6 @@
 {
   "name": "@hviana/baileys",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "lock": false,
   "nodeModulesDir": "manual",
   "unstable": ["bundle"],
@@ -10,7 +10,7 @@
     "./node_modules/@whiskeysockets/eslint-config"
   ],
   "imports": {},
-  "exports": "./import.ts",
+  "exports": "./mod.ts",
   "publish": {
     "include": ["./**"]
   },
