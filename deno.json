@@ -1,6 +1,6 @@
 {
   "name": "@hviana/baileys",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "lock": false,
   "nodeModulesDir": "manual",
   "links": [
@@ -9,7 +9,7 @@
     "./node_modules/@whiskeysockets/eslint-config"
   ],
   "imports": {},
-  "exports": "./node_modules/baileys/lib/index.js",
+  "exports": "./node_modules/baileys/lib/index.d.ts",
   "publish": {
     "include": ["./**"]
   },

@@ -11,5 +11,4 @@ build
 ```bash
 npm install baileys github:whiskeysockets/eslint-config github:WhiskeySockets/libsignal-node
 rm -rf package.json package-lock.json
-deno task build
 ```
