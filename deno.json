@@ -1,19 +1,22 @@
 {
   "name": "@hviana/baileys",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "lock": false,
   "nodeModulesDir": "manual",
+  "unstable": ["bundle"],
   "links": [
     "./node_modules/baileys",
     "./node_modules/@whiskeysockets/libsignal-node",
     "./node_modules/@whiskeysockets/eslint-config"
   ],
   "imports": {},
-  "exports": "./node_modules/baileys/lib/index.d.ts",
+  "exports": "./import.ts",
   "publish": {
     "include": ["./**"]
   },
   "tasks": {
-    "clean": "rm -f package.json package-lock.json"
+    "clean": "rm -f package.json package-lock.json",
+    "build-module": "deno run --allow-all build.ts",
+    "build": "deno task clean && deno task build-module"
   }
 }
